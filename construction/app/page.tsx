@@ -136,9 +136,9 @@ export default function Home() {
             <ScrollLink to="process" smooth={true} onClick={() => setIsMenuOpen(false)}>
               Process
             </ScrollLink>
-            <ScrollLink to="guarentees" smooth={true} onClick={() => setIsMenuOpen(false)}>
-              Guarantees
-            </ScrollLink>
+            <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+              About
+            </Link>
           </nav>
         </div>
       )}
