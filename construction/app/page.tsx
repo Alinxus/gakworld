@@ -344,7 +344,7 @@ export default function Home() {
             </div>
 
             <span className="text-xl font-medium">
-              John Doe, Project Manager <br />
+              Ganiu Kuku , Project Manager <br />
               Construction Co.
             </span>
           </div>
