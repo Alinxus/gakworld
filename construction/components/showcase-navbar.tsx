@@ -44,7 +44,7 @@ const ShowcaseNavbar = () => {
         <Link href="/showcase" className="hover:text-blue-500">
           Gallery
         </Link>
-        <Link href="/" className="hover:text-blue-500">
+        <Link href="/services" className="hover:text-blue-500">
           Services
         </Link>
         <Link href="/" className="hover:text-blue-500">
