@@ -7,19 +7,19 @@ const works = [
     background: "bg-gray-200",
     imageUrl: "/images/climbing.jpg",
     title: "High risen cleaning services",
-    link: "#",
+    link: "https://gakworld.vercel.app/services",
   },
   {
     background: "bg-gray-200",
     imageUrl: "/images/washing.jpg",
     title: "Cleaning Services",
-    link: "",
+    link: "https://gakworld.vercel.app/services",
   },
   {
     background: "bg-gray-200",
     imageUrl: "/images/1.jpg",
     title: "Construction",
-    link: "",
+    link: "https://gakworld.vercel.app/services",
   },
   {
     background: "bg-gray-200",
@@ -54,7 +54,7 @@ const works = [
   {
     background: "bg-gray-200",
     imageUrl: "/images/7.jpg",
-    title: "Waste management",
+    title: "Waste management And Logistics",
     link: "https://gakworld.vercel.app/services",
   },
 

@@ -130,8 +130,8 @@ export default function Home() {
             <Link href="/showcase" onClick={() => setIsMenuOpen(false)}>
               Gallery
             </Link>
-            <Link href="/showcase" onClick={() => setIsMenuOpen(false)}>
-              Gallery
+            <Link href="/services" onClick={() => setIsMenuOpen(false)}>
+              Services
             </Link><ScrollLink to="process" smooth={true} onClick={() => setIsMenuOpen(false)}>
               Process
             </ScrollLink>
