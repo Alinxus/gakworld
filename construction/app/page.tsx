@@ -90,9 +90,9 @@ export default function Home() {
         <Link href="/showcase" className="hover:text-blue-500">
           Gallery
         </Link>
-        <ScrollLink to="services" smooth={true} className="hover:text-blue-500">
+        <Link href="/services" className="hover:text-blue-500">
           Services
-        </ScrollLink>
+        </Link>
         <ScrollLink to="process" smooth={true} className="hover:text-blue-500">
           Process
         </ScrollLink>
@@ -344,7 +344,7 @@ export default function Home() {
             </div>
 
             <span className="text-xl font-medium">
-              Ganiu Kuku , Project Manager <br />
+              Ganiu Kuku , CEO<br />
               Construction Co.
             </span>
           </div>
