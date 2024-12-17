@@ -150,6 +150,42 @@ const services = [
       'We handle hazardous, non-hazardous, and medical waste disposal with the utmost care and compliance. Our services include secure transportation, waste treatment, and landfill management. We also offer consultancy to help organizations develop sustainable waste disposal practices, reducing their environmental footprint while adhering to legal requirements.',
     image: '/images/7.jpg',
   },
+  {
+    title: 'Building and Construction',
+    subtitle: 'Expert solutions for all your building and construction needs.',
+    description:
+      'Our building and construction services cover residential, commercial, and industrial projects, ensuring durability and aesthetic appeal.',
+    extendedDescription:
+      'We specialize in constructing high-quality buildings tailored to our clients’ needs. From project planning and design to execution, we ensure attention to detail and adherence to industry standards. Our services include renovations, expansions, and turnkey solutions, delivered by a team of experienced architects, engineers, and builders. We utilize modern technologies and sustainable practices to meet timelines and budgets effectively.',
+    image: '/images/s_3.jpg',
+  },
+  {
+    title: 'Oil and Gas Services',
+    subtitle: 'Comprehensive solutions for the oil and gas industry.',
+    description:
+      'Our oil and gas services include exploration, drilling, pipeline installation, and maintenance.',
+    extendedDescription:
+      'We provide specialized services to the oil and gas sector, ensuring efficiency and safety. From exploration and extraction to storage and transportation, our solutions are designed to optimize operations while minimizing environmental impact. Our team is equipped with advanced tools and knowledge to handle complex projects, including refinery upgrades, offshore drilling, and pipeline integrity management.',
+    image: '/images/oil_gas.jpg',
+  },
+  {
+    title: 'Logistics and Supply Chain',
+    subtitle: 'Seamless logistics and supply chain management solutions.',
+    description:
+      'Our logistics services streamline the movement of goods, ensuring timely delivery and cost efficiency.',
+    extendedDescription:
+      'We offer end-to-end logistics solutions, including transportation, warehousing, and inventory management. Our supply chain services focus on optimizing processes to enhance productivity and reduce costs. With our extensive network and modern technologies, we ensure that goods reach their destinations safely and on time.',
+    image: '/images/7.jpg',
+  },
+  // {
+  //   title: 'Consultancy Services',
+  //   subtitle: 'Professional consultancy to drive growth and innovation.',
+  //   description:
+  //     'Our consultancy services help businesses achieve their goals through expert advice and tailored strategies.',
+  //   extendedDescription:
+  //     'We provide consultancy across various sectors, including construction, waste management, and environmental sustainability. Our team of experts works closely with clients to identify challenges and develop actionable solutions. Services include project feasibility studies, risk assessments, and operational optimization to ensure long-term success.',
+  //   image: '/images/consultancy.jpg',
+  // },
 ];
 
 export default function ServicesPages() {
