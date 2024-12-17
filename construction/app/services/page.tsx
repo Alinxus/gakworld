@@ -1,40 +1,77 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ServicePage = ({ service } : any) => {
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="bg-[#fafafa] text-gray-800">
-      {/* Header Section */}
-      <header className="bg-white py-10 px-6 shadow-md">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/">
-            <Image
-              src="/logo/logo.png"
-              alt="Logo"
-              width={120}
-              height={40}
-              className="object-contain"
-            />
+    <header className="bg-white py-4 px-6 shadow-md sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <Link href="/">
+          <Image
+            src="/logo/logo.png"
+            alt="Logo"
+            width={120}
+            height={40}
+            className="object-contain"
+          />
+        </Link>
+        <nav className="hidden md:flex gap-x-8 text-lg">
+          <Link href="/" className="hover:text-blue-500">
+            Home
           </Link>
-          <nav className="hidden md:flex gap-x-8 text-lg">
-            <Link href="/waste-management" className="hover:text-blue-500">
+          <Link href="/waste-management" className="hover:text-blue-500">
+            Waste Management
+          </Link>
+          <Link href="/cleaning-services" className="hover:text-blue-500">
+            Cleaning Services
+          </Link>
+          <Link href="/pest-control" className="hover:text-blue-500">
+            Pest Control
+          </Link>
+          <Link href="/waste-disposal" className="hover:text-blue-500">
+            Waste Disposal
+          </Link>
+        </nav>
+        <button
+          className="md:hidden text-gray-700 hover:text-blue-500 focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? 'Close' : 'Menu'}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <div className="md:hidden bg-white shadow-lg rounded-lg mt-2 p-4">
+          <nav className="flex flex-col gap-y-4 text-gray-700 font-medium">
+            <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
+              Home
+            </Link>
+            <Link href="/waste-management" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Waste Management
             </Link>
-            <Link href="/cleaning-services" className="hover:text-blue-500">
+            <Link href="/cleaning-services" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Cleaning Services
             </Link>
-            <Link href="/pest-control" className="hover:text-blue-500">
+            <Link href="/pest-control" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Pest Control
             </Link>
-            <Link href="/waste-disposal" className="hover:text-blue-500">
+            <Link href="/waste-disposal" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Waste Disposal
             </Link>
           </nav>
         </div>
-      </header>
+      )}
+    </header>
+  );
+};
+
+const ServicePage = ({ service } : any) => {
+  return (
+    <div className="bg-[#fafafa] text-gray-800">
+      <Navbar />
 
       {/* Service Hero Section */}
       <section className="py-16 px-6 bg-gradient-to-br from-blue-100 to-blue-50">
@@ -72,31 +109,6 @@ const ServicePage = ({ service } : any) => {
           </p>
         </div>
       </section>
-
-      {/* Contact Section */}
-      {/* <section className="py-20 bg-blue-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-blue-600 mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Contact us today for professional {service.title.toLowerCase()} services tailored to your needs.
-          </p>
-          <Link
-            href="/contact"
-            className="py-3 px-10 text-lg bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </section> */}
-
-      {/* Footer
-      <footer className="py-10 bg-gray-800 text-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm">&copy; 2024 Gakworld Nigeria Limited. All Rights Reserved.</p>
-        </div>
-      </footer> */}
     </div>
   );
 };
