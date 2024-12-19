@@ -54,9 +54,23 @@ const works = [
   {
     background: "bg-gray-200",
     imageUrl: "/images/7.jpg",
-    title: "Waste management And Logistics",
+    title: "Waste management",
     link: "https://gakworld.vercel.app/services",
   },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/offshore_platform.jpg",
+    title: "Oil And Gas",
+    link: "https://gakworld.vercel.app/services",
+  },
+  {
+    background: "bg-gray-200",
+    imageUrl: "/images/logistics.jpg",
+    title: "Logistics",
+    link: "https://gakworld.vercel.app/services",
+  },
+
+
 
 
 ];

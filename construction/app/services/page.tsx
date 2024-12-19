@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link href="/" className="hover:text-blue-500">
             Home
           </Link>
-          <Link href="/waste-management" className="hover:text-blue-500">
+          {/* <Link href="/waste-management" className="hover:text-blue-500">
             Waste Management
           </Link>
           <Link href="/cleaning-services" className="hover:text-blue-500">
@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
           <Link href="/waste-disposal" className="hover:text-blue-500">
             Waste Disposal
-          </Link>
+          </Link> */}
         </nav>
         <button
           className="md:hidden text-gray-700 hover:text-blue-500 focus:outline-none"
@@ -49,7 +49,7 @@ const Navbar = () => {
             <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Home
             </Link>
-            <Link href="/waste-management" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
+            {/* <Link href="/waste-management" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Waste Management
             </Link>
             <Link href="/cleaning-services" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
@@ -60,7 +60,7 @@ const Navbar = () => {
             </Link>
             <Link href="/waste-disposal" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Waste Disposal
-            </Link>
+            </Link> */}
           </nav>
         </div>
       )}
@@ -157,7 +157,7 @@ const services = [
       'Our building and construction services cover residential, commercial, and industrial projects, ensuring durability and aesthetic appeal.',
     extendedDescription:
       'We specialize in constructing high-quality buildings tailored to our clients’ needs. From project planning and design to execution, we ensure attention to detail and adherence to industry standards. Our services include renovations, expansions, and turnkey solutions, delivered by a team of experienced architects, engineers, and builders. We utilize modern technologies and sustainable practices to meet timelines and budgets effectively.',
-    image: '/images/s_3.jpg',
+    image: '/images/3.jpg',
   },
   {
     title: 'Oil and Gas Services',
@@ -166,7 +166,7 @@ const services = [
       'Our oil and gas services include exploration, drilling, pipeline installation, and maintenance.',
     extendedDescription:
       'We provide specialized services to the oil and gas sector, ensuring efficiency and safety. From exploration and extraction to storage and transportation, our solutions are designed to optimize operations while minimizing environmental impact. Our team is equipped with advanced tools and knowledge to handle complex projects, including refinery upgrades, offshore drilling, and pipeline integrity management.',
-    image: '/images/oil_gas.jpg',
+    image: '/images/offshore_platform.jpg',
   },
   {
     title: 'Logistics and Supply Chain',
@@ -175,7 +175,7 @@ const services = [
       'Our logistics services streamline the movement of goods, ensuring timely delivery and cost efficiency.',
     extendedDescription:
       'We offer end-to-end logistics solutions, including transportation, warehousing, and inventory management. Our supply chain services focus on optimizing processes to enhance productivity and reduce costs. With our extensive network and modern technologies, we ensure that goods reach their destinations safely and on time.',
-    image: '/images/7.jpg',
+    image: '/images/logistics.jpg',
   },
   // {
   //   title: 'Consultancy Services',
