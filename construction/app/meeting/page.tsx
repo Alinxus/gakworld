@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import ShowcaseNavbar from "@/components/showcase-navbar";
 import { PiCheckCircle } from "react-icons/pi";
@@ -17,7 +17,7 @@ const Meeting = () => {
     message: "",
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -37,21 +37,25 @@ const Meeting = () => {
           <h1 className="text-4xl font-semibold pt-10">Let&apos;s Connect</h1>
           <p className="text-lg text-gray-500 py-4">
             We are always excited to meet new people and discuss new projects.
-            Please feel free to send us a message, and we&apos;ll get back to you as soon as possible.
+            Please feel free to send us a message, and we&apos;ll get back to
+            you as soon as possible.
           </p>
 
           {[
             {
               title: "Development + Design",
-              description: "Turn your ideas into reality with our development and design services.",
+              description:
+                "Turn your ideas into reality with our development and design services.",
             },
             {
               title: "Free Consultation",
-              description: "Get expert advice on how to improve your business and increase your online presence.",
+              description:
+                "Get expert advice on how to improve your business and increase your online presence.",
             },
             {
               title: "Technical Support",
-              description: "Get technical support for your website or application.",
+              description:
+                "Get technical support for your website or application.",
             },
           ].map((item, index) => (
             <motion.div
@@ -64,7 +68,9 @@ const Meeting = () => {
             >
               <PiCheckCircle className="rounded-md text-[#3d80d7] text-2xl flex-shrink-0" />
               <ul>
-                <h3 className="text-lg font-bold text-gray-700">{item.title}</h3>
+                <h3 className="text-lg font-bold text-gray-700">
+                  {item.title}
+                </h3>
                 <div className="text-gray-400">{item.description}</div>
               </ul>
             </motion.div>
@@ -72,7 +78,9 @@ const Meeting = () => {
         </div>
 
         <div className="md:w-1/2 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Contact Us
+          </h2>
           <form className="space-y-4">
             <div>
               <label className="block text-gray-600 mb-1">Name</label>
@@ -105,7 +113,6 @@ const Meeting = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 className="w-full border border-gray-300 rounded-md p-2"
-                rows="5"
                 placeholder="Your Message"
                 required
               ></textarea>
