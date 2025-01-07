@@ -29,10 +29,10 @@ export default function HeroSection() {
           create a sustainable and efficient future together.
         </p>
         <div className="flex space-x-4">
-          <Link href="/services">
+          <Link href="/services" className="bg-blue-200 rounded">
             Learn about Our services
           </Link>
-          <Link href="/meeting">
+          <Link href="/meeting" className="bg-blue-200 rounded">
             Contact Us
           </Link>
         </div>
