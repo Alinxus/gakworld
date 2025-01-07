@@ -32,7 +32,7 @@ export default function HeroSection() {
           <Link href="/services" className="bg-blue-600 rounded px-3 py-3">
             Learn about Our services
           </Link>
-          <Link href="/meeting" className="bg-blue-600 rounded">
+          <Link href="/meeting" className="bg-blue-600 rounded px-3 py-3">
             Contact Us
           </Link>
         </div>
