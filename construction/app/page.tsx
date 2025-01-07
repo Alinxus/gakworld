@@ -6,7 +6,7 @@ import { ServicesSection } from "../components/Services";
 import { FAQSection } from "../components/FAQsection";
 import { ProjectsSection } from "../components/Projects";
 import { TestimonialsSection } from "../components/Testimonials";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/Footers";
 
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
