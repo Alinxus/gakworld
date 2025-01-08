@@ -5,6 +5,7 @@ import HeroSection from "../components/Hero";
 import { ServicesSection } from "../components/Services";
 import { FAQSection } from "../components/FAQsection";
 import { ProjectsSection } from "../components/Projects";
+import { PastClientsSection } from "../components/PastClients";
 import { TestimonialsSection } from "../components/Testimonials";
 import { Footer } from "../components/Footers";
 
@@ -107,6 +108,7 @@ const Page: FC = () => {
                 <ServicesSection />
                 <FAQSection />
                 <ProjectsSection />
+                <PastClientsSection />
                 <TestimonialsSection />
                 <Footer />
             </div>

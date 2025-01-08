@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
+import Link from 'next/link'
 
 export const ProjectsSection: FC = () => {
     return (
@@ -60,9 +61,9 @@ export const ProjectsSection: FC = () => {
               </div>
             </div>
           </div>
-          <button className="mt-8 bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-md font-medium">
+          <Link className="mt-8 bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-md font-medium" href='/showcase'>
             Explore More Projects
-          </button>
+          </Link>
         </div>
       </section>
     );
