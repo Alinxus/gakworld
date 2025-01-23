@@ -23,18 +23,6 @@ const Navbar = () => {
           <Link href="/" className="hover:text-blue-500">
             Home
           </Link>
-          {/* <Link href="/waste-management" className="hover:text-blue-500">
-            Waste Management
-          </Link>
-          <Link href="/cleaning-services" className="hover:text-blue-500">
-            Cleaning Services
-          </Link>
-          <Link href="/pest-control" className="hover:text-blue-500">
-            Pest Control
-          </Link>
-          <Link href="/waste-disposal" className="hover:text-blue-500">
-            Waste Disposal
-          </Link> */}
         </nav>
         <button
           className="md:hidden text-gray-700 hover:text-blue-500 focus:outline-none"
@@ -49,18 +37,6 @@ const Navbar = () => {
             <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
               Home
             </Link>
-            {/* <Link href="/waste-management" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
-              Waste Management
-            </Link>
-            <Link href="/cleaning-services" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
-              Cleaning Services
-            </Link>
-            <Link href="/pest-control" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
-              Pest Control
-            </Link>
-            <Link href="/waste-disposal" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-500">
-              Waste Disposal
-            </Link> */}
           </nav>
         </div>
       )}
@@ -68,132 +44,147 @@ const Navbar = () => {
   );
 };
 
-const ServicePage = ({ service } : any) => {
-  return (
-    <div className="bg-[#fafafa] text-gray-800">
-      <Navbar />
-
-      {/* Service Hero Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-blue-100 to-blue-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl font-semibold text-blue-600 mb-4">{service.title}</h1>
-          <p className="text-lg text-gray-600">{service.subtitle}</p>
-        </div>
-      </section>
-
-      {/* Service Details Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <Image
-              src={service.image}
-              alt={service.title}
-              width={600}
-              height={400}
-              className="rounded-lg shadow-md"
-            />
-          </div>
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">What We Offer</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">{service.description}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Extended Details Section */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">More About {service.title}</h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            {service.extendedDescription}
-          </p>
-        </div>
-      </section>
+const ServiceCard = ({ service, onClick }) => (
+  <div
+    className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+    onClick={onClick}
+  >
+    <Image
+      src={service.image}
+      alt={service.title}
+      width={400}
+      height={300}
+      className="w-full h-48 object-cover"
+    />
+    <div className="p-4">
+      <h3 className="text-lg font-semibold text-gray-800">{service.title}</h3>
+      <p className="text-sm text-gray-600">{service.subtitle}</p>
     </div>
-  );
-};
+  </div>
+);
 
-const services = [
-  {
-    title: 'Waste Management',
-    subtitle: 'Comprehensive solutions for effective waste handling and disposal.',
-    description:
-      'We specialize in managing waste responsibly, from collection to disposal, ensuring a cleaner and sustainable environment.',
-    extendedDescription:
-      'Our waste management services include waste segregation, recycling programs, and environmentally friendly disposal methods. We work closely with businesses, residential communities, and industrial facilities to implement efficient waste management strategies tailored to their specific needs. With our state-of-the-art equipment and a team of trained professionals, we ensure minimal environmental impact and maximum efficiency.',
-    image: '/images/7.jpg',
-  },
-  {
-    title: 'Cleaning Services',
-    subtitle: 'Professional cleaning services for homes and businesses.',
-    description:
-      'Our cleaning services include residential, commercial, and industrial spaces, ensuring pristine environments that enhance comfort and productivity.',
-    extendedDescription:
-      'We provide deep cleaning, carpet cleaning, window cleaning, and post-construction cleaning services. Our team uses eco-friendly cleaning products and advanced techniques to deliver exceptional results. Whether you need a one-time service or a recurring schedule, we tailor our cleaning plans to fit your requirements and maintain the highest standards of hygiene and cleanliness.',
-    image: '/images/washing.jpg',
-  },
-  {
-    title: 'Pest Control',
-    subtitle: 'Efficient and eco-friendly pest management solutions.',
-    description:
-      'We provide comprehensive pest control services to eliminate infestations and prevent future occurrences, ensuring safety and hygiene.',
-    extendedDescription:
-      'Our pest control solutions cover a wide range of pests, including rodents, termites, bed bugs, and insects. We use integrated pest management (IPM) techniques that combine eco-friendly products with targeted treatments to ensure effective and long-lasting results. Our experts also provide preventive measures and ongoing monitoring to keep your spaces pest-free.',
-    image: '/images/s_2.png',
-  },
-  {
-    title: 'Waste Disposal',
-    subtitle: 'Safe and reliable waste disposal services.',
-    description:
-      'Our waste disposal services ensure that all waste is managed and disposed of in compliance with environmental regulations.',
-    extendedDescription:
-      'We handle hazardous, non-hazardous, and medical waste disposal with the utmost care and compliance. Our services include secure transportation, waste treatment, and landfill management. We also offer consultancy to help organizations develop sustainable waste disposal practices, reducing their environmental footprint while adhering to legal requirements.',
-    image: '/images/7.jpg',
-  },
-  {
-    title: 'Building and Construction',
-    subtitle: 'Expert solutions for all your building and construction needs.',
-    description:
-      'Our building and construction services cover residential, commercial, and industrial projects, ensuring durability and aesthetic appeal.',
-    extendedDescription:
-      'We specialize in constructing high-quality buildings tailored to our clients’ needs. From project planning and design to execution, we ensure attention to detail and adherence to industry standards. Our services include renovations, expansions, and turnkey solutions, delivered by a team of experienced architects, engineers, and builders. We utilize modern technologies and sustainable practices to meet timelines and budgets effectively.',
-    image: '/images/3.jpg',
-  },
-  {
-    title: 'Oil and Gas Services',
-    subtitle: 'Comprehensive solutions for the oil and gas industry.',
-    description:
-      'Our oil and gas services include exploration, drilling, pipeline installation, and maintenance.',
-    extendedDescription:
-      'We provide specialized services to the oil and gas sector, ensuring efficiency and safety. From exploration and extraction to storage and transportation, our solutions are designed to optimize operations while minimizing environmental impact. Our team is equipped with advanced tools and knowledge to handle complex projects, including refinery upgrades, offshore drilling, and pipeline integrity management.',
-    image: '/images/offshore_platform.jpg',
-  },
-  {
-    title: 'Logistics and Supply Chain',
-    subtitle: 'Seamless logistics and supply chain management solutions.',
-    description:
-      'Our logistics services streamline the movement of goods, ensuring timely delivery and cost efficiency.',
-    extendedDescription:
-      'We offer end-to-end logistics solutions, including transportation, warehousing, and inventory management. Our supply chain services focus on optimizing processes to enhance productivity and reduce costs. With our extensive network and modern technologies, we ensure that goods reach their destinations safely and on time.',
-    image: '/images/logistics.jpg',
-  },
-  // {
-  //   title: 'Consultancy Services',
-  //   subtitle: 'Professional consultancy to drive growth and innovation.',
-  //   description:
-  //     'Our consultancy services help businesses achieve their goals through expert advice and tailored strategies.',
-  //   extendedDescription:
-  //     'We provide consultancy across various sectors, including construction, waste management, and environmental sustainability. Our team of experts works closely with clients to identify challenges and develop actionable solutions. Services include project feasibility studies, risk assessments, and operational optimization to ensure long-term success.',
-  //   image: '/images/consultancy.jpg',
-  // },
-];
+const ServicePopup = ({ service, onClose }) => (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+      <button
+        className="absolute top-2 right-2 text-gray-600 hover:text-red-500"
+        onClick={onClose}
+      >
+        ✖
+      </button>
+      <Image
+        src={service.image}
+        alt={service.title}
+        width={400}
+        height={300}
+        className="w-full h-48 object-cover rounded-lg mb-4"
+      />
+      <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
+      <p className="text-sm text-gray-600 mb-4">{service.description}</p>
+      <p className="text-sm text-gray-600">{service.extendedDescription}</p>
+    </div>
+  </div>
+);
 
 export default function ServicesPages() {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
-    <div>
-      {services.map((service, index) => (
-        <ServicePage key={index} service={service} />
-      ))}
+    <div className="bg-gray-50 min-h-screen">
+      <Navbar />
+
+      {/* Services Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-3xl font-bold text-gray-800 text-center mb-8">
+            Our Services
+          </h1>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                service={service}
+                onClick={() => setSelectedService(service as any)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Popup */}
+      {selectedService && (
+        <ServicePopup
+          service={selectedService}
+          onClose={() => setSelectedService(null)}
+        />
+      )}
     </div>
   );
 }
+
+const services = [
+  {
+    title: 'Professional Cleaning Services',
+    subtitle: 'Thorough cleaning for homes, offices, and industries.',
+    description:
+      'We provide stripping, scrubbing, polishing, and buffing of tiles and marble floors, along with maintenance of property and janitorial services.',
+    extendedDescription:
+      'Our cleaning services include toilets, windows, and high-risen external wall cleaning. We use advanced materials and anti-fungal agents to ensure hygiene and safety. Additionally, we maintain the highest standards by employing trained professionals and modern equipment.',
+    image: '/images/climbing.jpg',
+  },
+  {
+    title: 'Pest Control Services',
+    subtitle: 'Efficient pest control and rodent management solutions.',
+    description:
+      'Our pest control includes fumigation, deratization, and decontamination services for offices, gardens, warehouses, and homes.',
+    extendedDescription:
+      'We use eco-friendly baits, advanced equipment, and IPM (Integrated Pest Management) techniques to eliminate pests and prevent reoccurrence. We ensure your space remains safe, hygienic, and pest-free.',
+    image: '/images/pest.jpeg',
+  },
+  {
+    title: 'Waste Disposal Services',
+    subtitle: 'Reliable waste collection and disposal.',
+    description:
+      'We handle weekly waste removal and provide industrial waste bins made from durable materials like steel and plastic.',
+    extendedDescription:
+      'Our waste disposal services ensure cleanliness and sustainability. We comply with environmental regulations, offering tailored solutions for industrial, residential, and commercial clients.',
+    image: '/images/7.jpg',
+  },
+  {
+    title: 'Construction and Drainage Services',
+    subtitle: 'Expert solutions for building and drainage systems.',
+    description:
+      'We specialize in construction, drainage systems, and civil engineering services with an emphasis on quality and efficiency.',
+    extendedDescription:
+      'Our services include site preparation, earthmoving, tunneling, and drainage installations. We employ modern technologies to meet project demands while adhering to sustainable practices.',
+    image: '/images/1.jpg',
+  },
+  {
+    title: 'High-Risen External Wall Cleaning',
+    subtitle: 'Professional external wall cleaning services.',
+    description:
+      'We restore the aesthetics of exterior walls and glass panels using anti-fungal agents and extendable equipment.',
+    extendedDescription:
+      'Our techniques include telescopic squeegees, wall washers, and anti-fungal treatments to remove greenish appearances and maintain aluminum frames. We ensure a professional finish for high-rise structures.',
+    image: '/images/washing.jpg',
+  },
+  {
+    title: 'Logistics Services',
+    subtitle: 'Comprehensive logistics and supply chain management solutions.',
+    description:
+      'Streamline the movement of goods with our reliable logistics services, ensuring timely delivery and cost-efficiency.',
+    extendedDescription:
+      'Our logistics services include end-to-end transportation, advanced warehousing solutions, distribution networks, and supply chain optimization. With real-time tracking systems and a commitment to sustainability, we help businesses enhance operational productivity while reducing costs and environmental impact.',
+    image: '/images/logistics.jpg',
+  },
+  {
+    title: 'Oil and Gas Services',
+    subtitle: 'Expert solutions for the oil and gas industry.',
+    description:
+      'Optimize operations in the oil and gas sector with our exploration, drilling, pipeline, and refinery services.',
+    extendedDescription:
+      'We provide a full spectrum of services in the oil and gas industry, including exploration, advanced drilling technologies, pipeline installation and maintenance, and storage solutions. Our team ensures compliance with environmental standards while delivering innovative solutions for sustainable operations and long-term efficiency.',
+    image: '/images/offshore_platform.jpg',
+  },
+  
+];
