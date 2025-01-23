@@ -44,7 +44,7 @@ const Navbar = () => {
   );
 };
 
-const ServiceCard = ({ service, onClick }) => (
+const ServiceCard = ({ service, onClick } : any) => (
   <div
     className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
     onClick={onClick}
@@ -63,7 +63,7 @@ const ServiceCard = ({ service, onClick }) => (
   </div>
 );
 
-const ServicePopup = ({ service, onClose }) => (
+const ServicePopup = ({ service, onClose } : any) => (
   <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
     <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
       <button
